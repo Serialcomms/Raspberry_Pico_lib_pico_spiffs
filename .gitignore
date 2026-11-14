@@ -1,0 +1,13 @@
+build
+!.vscode/*
+
+# host test outputs
+tests/posix/posix_onboard
+tests/posix/posix_external
+tests/posix/xfer_onboard
+tests/posix/xfer_external
+tests/upstream/upstream_test
+tests/upstream/last_run.txt
+tests/upstream/warnings.txt
+tests/fuzz/fuzz
+tests/bench/bench
