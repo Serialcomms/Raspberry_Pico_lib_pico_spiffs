@@ -80,7 +80,7 @@ static uint32_t start_32k_block_erase(pico_spi_device_t *pico_spi, uint32_t eras
 
         if (spi_write_bytes == 4 && write_complete == true) {
 
-            printf("Winbond Flash 32K block erase complete\n");
+            //printf("Winbond Flash 32K block erase complete\n");
 
             return WINBOND_FLASH_32K_BLOCK_SIZE;
 
@@ -119,7 +119,7 @@ static uint32_t start_64k_block_erase(pico_spi_device_t *pico_spi, uint32_t eras
 
         if (spi_write_bytes == 4 && write_complete == true) {
 
-            printf("Winbond Flash 32K block erase complete\n");
+            //printf("Winbond Flash 64K block erase complete\n");
 
             return WINBOND_FLASH_64K_BLOCK_SIZE;
 
