@@ -1,0 +1,46 @@
+Sample output of SPIFFS on Pico onboard flash, showing test files
+=============================================================================
+
+pico_spiffs example
+mount: no error
+flash: onboard
+read back: Hello from pico_spiffs, uptime 2017 ms
+fopen("hello.txt", "wx"): File exists
+fopen of a missing file: No such file or directory
+remove old disk.img: 1042 ms
+erase 8 deleted blocks: 1813 ms
+440 KB: write 3156 ms (142 KB/s), read and verify 111 ms
+verify: all 450560 bytes match
+check: no error (26 ms)
+files:
+  disk.img                           450560 bytes
+  hello.txt                              39 bytes
+
+Example finished: rebooting to BOOTSEL
+
+
+Sample output of SPIFFS on external flash, showing test & existing user files
+=============================================================================
+
+pico_spiffs example
+Winbond Initialising All, Initial DMA Bytes=512
+Initialising DMA, Winbond TX channel number=0, Initial DMA Bytes=512
+Initialising DMA, Winbond RX channel number=1, Initial DMA Bytes=512
+Initialising Pico SPI, Baud Requested/Actual = 40000000/37500000
+mount: no error
+flash: external, SPI clock 37.500 MHz
+read back: Hello from pico_spiffs, uptime 2088 ms
+fopen("hello.txt", "wx"): File exists
+fopen of a missing file: No such file or directory
+remove old disk.img: 1246 ms
+erase 38 deleted blocks: 10509 ms
+2048 KB: write 5342 ms (392 KB/s), read and verify 919 ms
+verify: all 2097152 bytes match
+check: no error (2757 ms)
+files:
+  POSIX.txt                              50 bytes
+  v6.rk05                           2057761 bytes
+  hello.txt                              39 bytes
+  disk.img                          2097152 bytes
+
+Example finished: rebooting to BOOTSEL
