@@ -287,6 +287,7 @@ files) may not have.
 | `lib_pico_spiffs/` | The library: `CMakeLists.txt`, `include/` (`pico_spiffs.h`, `spiffs_config.h`, `sys/dirent.h`), `src/` (volume, backends, POSIX layer), `spiffs/` (the SPIFFS core) |
 | `lib_winbond_w25q/` | Copy of [lib_winbond_w25q](https://github.com/Serialcomms/Raspberry_Pico_lib_winbond_w25q), the external flash driver used when `PICO_SPIFFS_FLASH` is `EXTERNAL` |
 | `example/` | An example program |
+| `tools/flash_chip_erase/` | RP2350 utility that finds Winbond flash on QSPI CS0/CS1, SPI0 and SPI1 and performs a full chip erase; a separate RAM-only build (see its README) |
 | `tests/upstream/` | Upstream SPIFFS's own test suite, run against this core |
 | `tests/fuzz/` | Model-based fuzzer of the core |
 | `tests/posix/` | Tests of the C library interface with both backends, over simulated chips that check the SDK's rules |

@@ -11,3 +11,5 @@ tests/upstream/last_run.txt
 tests/upstream/warnings.txt
 tests/fuzz/fuzz
 tests/bench/bench
+tools/flash_chip_erase/tests/host_test
+tools/flash_chip_erase/tests/sim/sim
