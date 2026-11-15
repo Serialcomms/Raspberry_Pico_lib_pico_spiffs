@@ -29,6 +29,16 @@
 
 #define STDIN_FD 0
 
+/* Older newlib (such as Raspberry Pi OS Bookworm's arm-none-eabi 12.2, or
+   Ubuntu 24.04's 13.2) defines O_DSYNC and O_RSYNC only for Cygwin. Newer
+   newlib defines both as O_SYNC on every target, so do the same here. */
+#ifndef O_DSYNC
+#define O_DSYNC O_SYNC
+#endif
+#ifndef O_RSYNC
+#define O_RSYNC O_SYNC
+#endif
+
 /* ------------------------------------------------------------------ */
 /* open() flags                                                        */
 /* ------------------------------------------------------------------ */
