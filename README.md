@@ -280,6 +280,33 @@ files) may not have.
 </details>
 
 <details>
+<summary><b>Erasing a whole flash chip (flash_chip_erase)</b></summary>
+
+[`tools/flash_chip_erase/`](tools/flash_chip_erase/) is a companion utility
+for RP2350 boards that wipes an entire flash chip, for example to start
+again with a blank volume.
+
+- **Finds the flash:** it scans QSPI chip selects 0 and 1 (the board's own
+  flash, and a second chip such as the Pico Plus 2's) and SPI0 and SPI1 for
+  Winbond W25Q chips, and shows each one's device, JEDEC and unique IDs.
+- **Asks before erasing:** you choose a chip, then type the last 4 digits of
+  its unique ID to start. Write-protected chips and other devices, such as
+  PSRAM, are listed but never offered for erase.
+- **Shows progress:** a progress bar fills while the chip erases and the LED
+  pulses; afterwards it checks that the chip reads back blank.
+- **Runs from RAM:** loading its UF2 writes nothing to flash, so it can erase
+  the board's own flash too.
+
+> [!CAUTION]
+> Erasing QSPI channel 0 wipes the board's own flash: its program and any
+> SPIFFS volume. The board starts in BOOTSEL mode afterwards.
+
+It is a separate build from the library; see its
+[README](tools/flash_chip_erase/README.md) for building and wiring.
+
+</details>
+
+<details>
 <summary><b>Layout</b></summary>
 
 | Folder | What's there |
